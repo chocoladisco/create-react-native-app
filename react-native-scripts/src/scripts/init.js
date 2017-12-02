@@ -19,6 +19,7 @@ const DEFAULT_DEPENDENCIES = {
 const DEFAULT_DEV_DEPENDENCIES = {
   'jest-expo': '23.0.0',
   'react-test-renderer': '16.0.0',
+  'standard': '10.0.3'
 };
 
 module.exports = async (appPath: string, appName: string, verbose: boolean, cwd: string = '') => {
@@ -70,7 +71,7 @@ https://github.com/npm/npm/issues/16991
     eject: 'react-native-scripts eject',
     android: 'react-native-scripts android',
     ios: 'react-native-scripts ios',
-    test: 'node node_modules/jest/bin/jest.js --watch',
+    test: 'standard && node node_modules/jest/bin/jest.js --watch',
   };
 
   appPackage.jest = {
